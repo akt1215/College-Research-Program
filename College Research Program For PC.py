@@ -7,8 +7,9 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Define the API request parameters
 base_url = "https://api.data.gov/ed/collegescorecard/v1/"
 dataset = "schools.json?"
-college = "UC Berkeley"
-fields = ["school.name",
+college = "Duke"
+fields = ["id",
+         "school.name",
          "school.state",
          "school.city",
          "school.school_url",
@@ -21,12 +22,14 @@ fields = ["school.name",
          "latest.student.demographics.share_asian.home_ZIP",
          "latest.student.demographics.share_black.home_ZIP",
          "latest.student.demographics.share_hispanic.home_ZIP",
+         "latest.school.ft_faculty_rate",
          "school.carnegie_size_setting",
          "latest.admissions.sat_scores.average.overall",
          "latest.admissions.act_scores.midpoint.cumulative",
          "latest.admissions.test_requirements",
          "oops.variables.does.not.exist"]
-field  = ["Name",
+field  = ["id",
+         "Name",
          "State",
          "City",
          "Web site",
@@ -39,6 +42,7 @@ field  = ["Name",
          "Asian",
          "Black",
          "Hispanic",
+         "%Full Time Faculty",
          "carnegie size setting",
          "SAT average",
          "ACT midpoint cumulative",
@@ -69,7 +73,8 @@ worksheet = spreadsheet.worksheet(sheet_name)
 next_row = len(worksheet.get_all_values()) + 1
 
 
-new_order = ["school.name",
+new_order = ["id",
+         "school.name",
          "school.state",
          "school.city",
          "school.school_url",
@@ -82,6 +87,7 @@ new_order = ["school.name",
          "latest.student.demographics.share_asian.home_ZIP",
          "latest.student.demographics.share_black.home_ZIP",
          "latest.student.demographics.share_hispanic.home_ZIP",
+         "latest.school.ft_faculty_rate",
          "school.carnegie_size_setting",
          "latest.admissions.sat_scores.average.overall",
          "latest.admissions.act_scores.midpoint.cumulative",
