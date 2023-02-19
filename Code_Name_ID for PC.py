@@ -1,7 +1,6 @@
 import requests
 import pandas as pd
 import gspread
-from gspread_formatting import *
 from oauth2client.service_account import ServiceAccountCredentials
 
 def research(name_or_id):
