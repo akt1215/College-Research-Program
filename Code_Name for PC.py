@@ -1,4 +1,5 @@
 import requests
+import tensorflow as tf
 import pandas as pd
 import gspread
 from gspread_formatting import *
