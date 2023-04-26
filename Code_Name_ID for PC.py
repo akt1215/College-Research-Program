@@ -26,6 +26,7 @@ def research(name_or_id):
              "school.carnegie_size_setting",
              "latest.admissions.sat_scores.average.overall",
              "latest.admissions.act_scores.midpoint.cumulative",
+             "11.07.earnings.highest.3_yr.not_enrolled.overall_count"
              "latest.admissions.test_requirements",
              "oops.variables.does.not.exist"]
     field  = ["id",
